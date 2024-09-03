@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRP筋粘结强度预测</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>FRP筋粘结强度预测</h1>
+    <form id="predictionForm">
+        <label for="T">温度 (T):</label>
+        <input type="number" id="T" required>
+
+        <label for="FM">失效模式 (FM):</label>
+        <select id="FM" required>
+            <option value="1">FRP筋与砂层脱黏</option>
+            <option value="2">FRP筋拉脱</option>
+            <option value="3">混凝土剪切破坏</option>
+            <option value="4">FRP筋断裂</option>
+            <option value="5">混凝土劈裂</option>
+        </select>
+
+        <label for="FT">FRP类型 (FT):</label>
+        <select id="FT" required>
+            <option value="1">GFRP</option>
+            <option value="2">CFRP</option>
+            <option value="3">BFRP</option>
+        </select>
+
+        <label for="BS">FRP筋表面形态 (BS):</label>
+        <select id="BS" required>
+            <option value="1">覆砂</option>
+            <option value="2">纤维缠绕覆砂</option>
+            <option value="3">带肋</option>
+            <option value="4">纤维缠绕</option>
+            <option value="5">覆砂带肋</option>
+        </select>
+
+        <label for="d">FRP筋直径 (d):</label>
+        <input type="number" id="d" step="0.1" required>
+
+        <label for="la">锚固长度 (la):</label>
+        <input type="number" id="la" step="0.1" required>
+
+        <label for="fc">混凝土抗压强度 (fc):</label>
+        <input type="number" id="fc" step="0.1" required>
+
+        <label for="c">混凝土保护层厚度 (c):</label>
+        <input type="number" id="c" step="0.1" required>
+
+        <button type="submit">预测</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <script>
+        let model;
+        let scaler;
+
+        // 加载模型和scaler
+        async function loadModelAndScaler() {
+            model = await tf.loadLayersModel('model/model.json');
+            const scalerResponse = await fetch('model/scaler.json');
+            scaler = await scalerResponse.json();
+        }
+
+        loadModelAndScaler();
+
+        // 标准化函数
+        function standardize(data) {
+            return data.map((value, index) => (value - scaler.mean[index]) / scaler.scale[index]);
+        }
+
+        document.getElementById('predictionForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const T = parseFloat(document.getElementById('T').value);
+            const FM = parseInt(document.getElementById('FM').value);
+            const FT = parseInt(document.getElementById('FT').value);
+            const BS = parseInt(document.getElementById('BS').value);
+            const d = parseFloat(document.getElementById('d').value);
+            const la = parseFloat(document.getElementById('la').value);
+            const fc = parseFloat(document.getElementById('fc').value);
+            const c = parseFloat(document.getElementById('c').value);
+            const cd = c / d;
+
+            const rawInput = [T, FM, FT, BS, d, la, fc, cd];
+            const standardizedInput = standardize(rawInput);
+
+            const input = tf.tensor2d([standardizedInput]);
+            const prediction = model.predict(input);
+            const result = await prediction.data();
+
+            document.getElementById('result').innerText = `预测的粘结强度 (τu): ${result[0].toFixed(2)} MPa`;
+        });
+    </script>
+</body>
+</html>
