@@ -1,0 +1,23 @@
+2024-11-09 12:34:22,214 - INFO - 模型和缩放器加载成功
+2024-11-09 12:34:22,324 - ERROR - 加载图标 predict_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\predict_icon.png'
+2024-11-09 12:34:22,324 - ERROR - 加载图标 browse_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\browse_icon.png'
+2024-11-09 12:34:22,324 - ERROR - 加载图标 batch_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\batch_icon.png'
+2024-11-11 22:20:47,489 - INFO - 模型和缩放器加载成功
+2024-11-11 22:20:47,578 - ERROR - 加载图标 predict_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\predict_icon.png'
+2024-11-11 22:20:47,578 - ERROR - 加载图标 browse_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\browse_icon.png'
+2024-11-11 22:20:47,578 - ERROR - 加载图标 batch_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\batch_icon.png'
+2024-11-12 00:05:23,951 - INFO - 模型和缩放器加载成功
+2024-11-12 00:05:24,048 - ERROR - 加载图标 predict_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\predict_icon.png'
+2024-11-12 00:05:24,049 - ERROR - 加载图标 browse_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\browse_icon.png'
+2024-11-12 00:05:24,049 - ERROR - 加载图标 batch_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\batch_icon.png'
+2024-11-12 00:05:28,489 - INFO - 预测成功。输入: [1.0, 1, 1, 1, 1.0, 1.0, 1.0, 1.0], 预测值: 21.50
+2024-11-12 00:06:59,296 - INFO - 模型和缩放器加载成功
+2024-11-12 00:06:59,369 - ERROR - 加载图标 predict_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\predict_icon.png'
+2024-11-12 00:06:59,370 - ERROR - 加载图标 browse_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\browse_icon.png'
+2024-11-12 00:06:59,370 - ERROR - 加载图标 batch_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\batch_icon.png'
+2024-11-12 00:07:03,678 - ERROR - 输入值错误: could not convert string to float: ''
+2024-11-12 00:07:05,174 - INFO - 预测成功。输入: [212.0, 1, 1, 1, 2123.0, 23.0, 12.0, 12.0], 预测值: 16.75
+2024-11-12 00:25:52,375 - INFO - 模型和缩放器加载成功
+2024-11-12 00:25:52,470 - ERROR - 加载图标 predict_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\predict_icon.png'
+2024-11-12 00:25:52,471 - ERROR - 加载图标 browse_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\browse_icon.png'
+2024-11-12 00:25:52,471 - ERROR - 加载图标 batch_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\FRP-GUI\\frp-bond-strength-predictor\\dist\\prediction_app\\_internal\\batch_icon.png'
