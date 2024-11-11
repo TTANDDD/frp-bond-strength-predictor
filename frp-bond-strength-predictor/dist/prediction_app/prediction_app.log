@@ -1,0 +1,8 @@
+2024-11-09 12:34:22,214 - INFO - 模型和缩放器加载成功
+2024-11-09 12:34:22,324 - ERROR - 加载图标 predict_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\predict_icon.png'
+2024-11-09 12:34:22,324 - ERROR - 加载图标 browse_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\browse_icon.png'
+2024-11-09 12:34:22,324 - ERROR - 加载图标 batch_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\batch_icon.png'
+2024-11-11 22:20:47,489 - INFO - 模型和缩放器加载成功
+2024-11-11 22:20:47,578 - ERROR - 加载图标 predict_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\predict_icon.png'
+2024-11-11 22:20:47,578 - ERROR - 加载图标 browse_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\browse_icon.png'
+2024-11-11 22:20:47,578 - ERROR - 加载图标 batch_icon.png 时出错: [Errno 2] No such file or directory: 'C:\\Users\\QuHaiLong\\Desktop\\写GAN论文\\软件预测汇总\\软件预测+美观+图片 - 副本\\dist\\prediction_app\\_internal\\batch_icon.png'
